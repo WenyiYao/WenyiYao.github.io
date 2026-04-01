@@ -440,16 +440,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-joined-the-vector-institute-as-a-machine-learning-associate",
+          title: 'Joined the Vector Institute as a Machine Learning Associate.',
           description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
+          section: "News",},{id: "news-working-on-an-agentic-ai-system-for-healthcare-scheduling-in-collaboration-with-petal",
+          title: 'Working on an agentic AI system for healthcare scheduling in collaboration with Petal....',
           description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+          section: "News",},{id: "news-poster-accepted-at-the-speech-language-amp-amp-audiology-canada-conference",
+          title: 'Poster accepted at the Speech-Language &amp;amp;amp; Audiology Canada Conference.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
