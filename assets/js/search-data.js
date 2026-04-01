@@ -514,6 +514,13 @@ ninja.data = [{
           window.open("mailto:%77%79%61%6F%34%35@%75%77%6F.%63%61", "_blank");
         },
       },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/wenyi-yao", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
