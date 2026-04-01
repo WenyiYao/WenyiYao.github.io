@@ -215,6 +215,33 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Social (under profile photo)
+.profile {
+  .contact-icons {
+    margin-top: 0.75rem;
+    font-size: 3rem;
+
+    a {
+      img {
+        width: 2.6rem;
+        height: 2.6rem;
+        margin-bottom: 0.25rem;
+      }
+
+      svg {
+        width: 2.8rem;
+        height: 3.2rem;
+        margin-bottom: 0.25rem;
+
+        image {
+          width: 2.8rem;
+          height: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;
