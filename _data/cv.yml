@@ -35,87 +35,87 @@ cv:
           - Certified in Artificial Intelligence and Intelligent Systems
 
     Experience:
-  - company: Vector Institute
-    position: Machine Learning Associate
-    location: Toronto, ON, Canada
-    start_date: 2026-01
-    end_date: present
-    summary: Working on applied agentic AI systems for healthcare operations and scheduling workflows.
-    highlights:
-      - Built an agentic scheduling workflow with LangGraph and Azure OpenAI
-      - Translated free-text physician requests into validated scheduling constraints
-      - Added guardrails, validation, and clarification fallback logic
-      - Developed evaluation workflows for agent quality and tool use
+      - company: Vector Institute
+        position: Machine Learning Associate
+        location: Toronto, ON, Canada
+        start_date: 2026-01
+        end_date: present
+        summary: Working on applied agentic AI systems for healthcare operations and scheduling workflows.
+        highlights:
+          - Built an agentic scheduling workflow with LangGraph and Azure OpenAI
+          - Translated free-text physician requests into validated scheduling constraints
+          - Added guardrails, validation, and clarification fallback logic
+          - Developed evaluation workflows for agent quality and tool use
 
-  - company: Western University
-    position: Technical / Research Support I
-    location: London, ON, Canada
-    start_date: 2025-05
-    end_date: 2025-12
-    summary: Conducted research and development on speech AI for preschool conversational ASR under the supervision of Dr. Nikan and Dr. Daub.
-    highlights:
-      - Built a zero-shot LLM second-pass correction pipeline for child ASR
-      - Developed FAISS-based retrieval over developmental phonology evidence
-      - Studied Whisper transcription errors and confidence-guided correction
-      - Contributed to research communication and paper preparation
+      - company: Western University
+        position: Technical / Research Support I
+        location: London, ON, Canada
+        start_date: 2025-05
+        end_date: 2025-12
+        summary: Conducted research and development on speech AI for preschool conversational ASR under the supervision of Dr. Nikan and Dr. Daub.
+        highlights:
+          - Built a zero-shot LLM second-pass correction pipeline for child ASR
+          - Developed FAISS-based retrieval over developmental phonology evidence
+          - Studied Whisper transcription errors and confidence-guided correction
+          - Contributed to research communication and paper preparation
 
-  - company: Vosyn Inc.
-    position: Machine Learning Engineer Intern
-    location: Remote
-    start_date: 2025-03
-    end_date: 2025-06
-    summary: Worked on multilingual speech transcription and speaker diarization pipelines.
-    highlights:
-      - Developed an end-to-end audio pipeline on GCP
-      - Dockerized transcription and diarization microservices
-      - Deployed GPU services on Vertex AI Endpoints
-      - Standardized deployment workflows and codebase structure
+      - company: Vosyn Inc.
+        position: Machine Learning Engineer Intern
+        location: Remote
+        start_date: 2025-03
+        end_date: 2025-06
+        summary: Worked on multilingual speech transcription and speaker diarization pipelines.
+        highlights:
+          - Developed an end-to-end audio pipeline on GCP
+          - Dockerized transcription and diarization microservices
+          - Deployed GPU services on Vertex AI Endpoints
+          - Standardized deployment workflows and codebase structure
 
-  - company: Western University
-    position: Graduate Researcher
-    location: London, ON, Canada
-    start_date: 2024-01
-    end_date: 2025-01
-    summary: Conducted research on multimodal learning and computer vision for autonomous vehicle perception under the supervision of Dr. Nikan.
-    highlights:
-      - Built CNN models for emergency vehicle detection
-      - Explored multimodal learning and contributed to an AV-LLM survey
-      - Trained and evaluated models on GPU clusters with Slurm
-  
-  - company: Mount Sinai Hospital
-    position: Volunteer Research Assistant
-    location: Toronto, ON, Canada
-    start_date: 2023-02
-    end_date: 2024-01
-    summary: Supported biomedical literature analysis for genetic variant research under the supervision of Dr. Lerner-Ellis.
-    highlights:
-      - Extracted genetic variant evidence from biomedical literature
-      - Collected phenotype, allele frequency, and assay information
-      - Used AI-based genomic search tools to improve retrieval efficiency
+      - company: Western University
+        position: Graduate Researcher
+        location: London, ON, Canada
+        start_date: 2024-01
+        end_date: 2025-01
+        summary: Conducted research on multimodal learning and computer vision for autonomous vehicle perception under the supervision of Dr. Nikan.
+        highlights:
+          - Built CNN models for emergency vehicle detection
+          - Explored multimodal learning and contributed to an AV-LLM survey
+          - Trained and evaluated models on GPU clusters with Slurm
 
-  - company: Tencent
-    position: Project Management Intern
-    location: Hefei, China
-    start_date: 2021-05
-    end_date: 2021-08
-    summary: Supported cross-functional project coordination and communication for large-scale event delivery.
-    highlights:
-      - Supported schedule tracking, reporting, and document coordination
-      - Worked with cross-functional teams on logistics and content planning
-      - Helped communicate technical information to non-technical stakeholders
+      - company: Mount Sinai Hospital
+        position: Volunteer Research Assistant
+        location: Toronto, ON, Canada
+        start_date: 2023-02
+        end_date: 2024-01
+        summary: Supported biomedical literature analysis for genetic variant research under the supervision of Dr. Lerner-Ellis.
+        highlights:
+          - Extracted genetic variant evidence from biomedical literature
+          - Collected phenotype, allele frequency, and assay information
+          - Used AI-based genomic search tools to improve retrieval efficiency
 
-Skills:
-  - name: Programming
-    keywords: "Python, SQL, Java, JavaScript/TypeScript, MATLAB, R, HTML/CSS, Bash"
+      - company: Tencent
+        position: Project Management Intern
+        location: Hefei, China
+        start_date: 2021-05
+        end_date: 2021-08
+        summary: Supported cross-functional project coordination and communication for large-scale event delivery.
+        highlights:
+          - Supported schedule tracking, reporting, and document coordination
+          - Worked with cross-functional teams on logistics and content planning
+          - Helped communicate technical information to non-technical stakeholders
 
-  - name: Machine Learning
-    keywords: "PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, SciPy"
+    Skills:
+      - name: Programming
+        keywords: "Python, SQL, Java, JavaScript/TypeScript, MATLAB, R, HTML/CSS, Bash"
 
-  - name: Information Retrieval
-    keywords: "Embeddings, FAISS, Vector Search, RAG"
+      - name: Machine Learning
+        keywords: "PyTorch, TensorFlow, scikit-learn, Pandas, NumPy, SciPy"
 
-  - name: Agentic AI
-    keywords: "LangGraph, LangChain, Tool Calling, Prompt Design, AgentEvals, OpenEvals"
+      - name: Information Retrieval
+        keywords: "Embeddings, FAISS, Vector Search, RAG"
 
-  - name: Cloud & MLOps
-    keywords: "Docker, Azure OpenAI, Azure VM, GCP, Vertex AI, Artifact Registry, Cloud Build, CI/CD, Slurm, Linux, Git/GitHub"
+      - name: Agentic AI
+        keywords: "LangGraph, LangChain, Tool Calling, Prompt Design, AgentEvals, OpenEvals"
+
+      - name: Cloud & MLOps
+        keywords: "Docker, Azure OpenAI, Azure VM, GCP, Vertex AI, Artifact Registry, Cloud Build, CI/CD, Slurm, Linux, Git/GitHub"
