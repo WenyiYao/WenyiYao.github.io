@@ -26,6 +26,6 @@ latest_posts:
 
 I am a machine learning associate at the [Vector Institute](https://vectorinstitute.ai/), where I build agentic AI systems for healthcare scheduling workflows. My work includes developing systems that translate free-text physician requests into validated scheduling constraints for downstream APIs, with clarification logic, guardrails, and evaluation pipelines for reliable deployment. 
 
-My interests include LLM systems, speech technologies, workflow automation, and multimodal learning. I received my M.Eng. from Western University with a specialization in AI, and my Bachelor of Computer Science from Dalhousie University.
+My interests include agentic AI systems, speech AI, workflow automation, and multimodal learning. I received my M.Eng. from Western University with a specialization in AI, and my Bachelor of Computer Science from Dalhousie University.
 
 Previously, I worked at Western University on LLM-based automatic speech recognition error correction for preschool conversational speech under the guidance of researchers at the National Centre for Audiology, with a focus on improving recognition for young children. This work contributed to a paper submitted to Interspeech 2026 and a poster accepted at the Speech-Language & Audiology Canada Conference.
