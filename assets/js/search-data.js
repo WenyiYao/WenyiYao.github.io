@@ -467,7 +467,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/{"value"=>"wenyi-yao"}", "_blank");
+          window.open("https://www.linkedin.com/in/wenyi-yao", "_blank");
         },
       },{
       id: 'light-theme',
