@@ -1,0 +1,30 @@
+# Chronological order: most recent first
+- company: NEX Labs
+  date: July 2026 - Present
+  title: AI Research Intern
+  stack: LLM Evaluation, Fine-Tuning
+  location: Toronto, ON
+
+- company: Vector Institute
+  date: Jan 2026 - May 2026
+  title: Machine Learning Associate
+  stack: Agentic AI, LangGraph, Azure, FastAPI, CI/CD
+  location: Toronto, ON
+
+- company: Western University
+  date: May 2025 - Dec 2025
+  title: Machine Learning Researcher
+  stack: RAG, Speech AI, LoRA, Hugging Face, FAISS
+  location: London, ON
+
+- company: Vosyn Inc.
+  date: Mar 2025 - Jun 2025
+  title: Machine Learning Engineer Intern
+  stack: GCP, Vertex AI
+  location: Toronto, ON
+
+- company: Dreamaze Book
+  date: Oct 2024 - Mar 2025
+  title: Frontend Developer
+  stack: Next.js, React, TypeScript
+  location: Remote

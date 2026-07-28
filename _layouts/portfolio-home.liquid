@@ -1,0 +1,122 @@
+---
+layout: default
+---
+<div class="portfolio-home">
+  <section class="portfolio-hero" id="home">
+    <div class="portfolio-avatar">
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=profile_image_path
+        class="portfolio-avatar__img"
+        sizes="200px"
+        alt=site.first_name
+        cache_bust=true
+      %}
+    </div>
+
+    <h1 class="portfolio-hero__title">
+      {{ page.hero.headline_before }}
+      <span class="portfolio-gradient-text">{{ page.hero.headline_accent }}</span>
+    </h1>
+
+    <p class="portfolio-hero__bio">{{ page.hero.bio }}</p>
+
+    <div class="portfolio-hero__ctas">
+      <a class="portfolio-btn portfolio-btn--solid" href="{{ page.hero.cta_primary.url }}">
+        {{- page.hero.cta_primary.label -}}
+      </a>
+      <a
+        class="portfolio-btn portfolio-btn--outline"
+        href="{% if page.hero.cta_secondary.external %}{{ page.hero.cta_secondary.url }}{% else %}{{ page.hero.cta_secondary.url | relative_url }}{% endif %}"
+        {% if page.hero.cta_secondary.external %}target="_blank" rel="noopener noreferrer"{% endif %}
+      >
+        {{- page.hero.cta_secondary.label -}}
+      </a>
+    </div>
+
+    {% if page.skills and page.skills.size > 0 %}
+      <div class="portfolio-skills">
+        <p class="portfolio-skills__label">Experience With</p>
+        <ul class="portfolio-skills__list" aria-label="Technologies">
+          {% for skill in page.skills %}
+            <li class="portfolio-skills__item" title="{{ skill.name }}">
+              <i class="{{ skill.icon }}" aria-hidden="true"></i>
+              <span class="sr-only">{{ skill.name }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </section>
+
+  <section class="portfolio-experience" id="experience">
+    <h2 class="portfolio-experience__title">Experience</h2>
+    <div class="portfolio-timeline">
+      {% for job in site.data.experience %}
+        {% assign side = forloop.index0 | modulo: 2 %}
+        <article class="portfolio-timeline__item {% if side == 0 %}portfolio-timeline__item--left{% else %}portfolio-timeline__item--right{% endif %}">
+          <div class="portfolio-timeline__marker" aria-hidden="true"></div>
+          <div class="portfolio-timeline__card">
+            <div class="portfolio-timeline__meta">
+              <p class="portfolio-timeline__date">{{ job.date }}</p>
+              <p class="portfolio-timeline__location">{{ job.location }}</p>
+            </div>
+            <h3 class="portfolio-timeline__company">{{ job.company }}</h3>
+            <p class="portfolio-timeline__role">{{ job.title }}</p>
+            <p class="portfolio-timeline__stack">{{ job.stack }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="portfolio-projects" id="projects">
+    <h2 class="portfolio-projects__title">Projects</h2>
+    <div class="portfolio-projects__grid">
+      {% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
+      {% if featured_projects.size > 0 %}
+        {% assign sorted_projects = featured_projects %}
+      {% else %}
+        {% assign sorted_projects = site.projects | sort: 'importance' %}
+      {% endif %}
+      {% assign project_limit = page.projects_limit | default: 3 %}
+      {% for project in sorted_projects limit: project_limit %}
+        <a
+          class="portfolio-project-card"
+          href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}"
+          {% if project.redirect %}target="_blank" rel="noopener noreferrer"{% endif %}
+        >
+          {% if project.img %}
+            {%
+              include figure.liquid
+              loading="lazy"
+              path=project.img
+              sizes="350px"
+              alt=project.title
+              class="portfolio-project-card__img"
+            %}
+          {% else %}
+            <div class="portfolio-project-card__placeholder" aria-hidden="true"></div>
+          {% endif %}
+          <div class="portfolio-project-card__body">
+            <h3 class="portfolio-project-card__title">{{ project.title }}</h3>
+            <p class="portfolio-project-card__desc">{{ project.description }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="portfolio-contact" id="contact">
+    <h2 class="portfolio-contact__title">Contact</h2>
+    <p class="portfolio-contact__text">
+      Want to collaborate or chat about agentic AI systems?
+      <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+    </p>
+    {% if page.profile.social %}
+      <div class="portfolio-contact__social">{% social_links %}</div>
+    {% endif %}
+  </section>
+</div>

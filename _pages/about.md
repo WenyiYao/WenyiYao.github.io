@@ -1,31 +1,49 @@
 ---
-layout: about
-title: about
+layout: portfolio-home
+title: home
 permalink: /
+portfolio_home: true
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
   social: true
-  
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+hero:
+  headline_before: "I build AI systems and write"
+  headline_accent: "about it!"
+  bio: >-
+    I am a machine learning associate at the Vector Institute, where I build agentic AI systems
+    for healthcare scheduling workflows. My interests include agentic AI, speech AI, workflow
+    automation, and multimodal learning. I hold an M.Eng. from Western University (AI) and a
+    B.C.S. from Dalhousie University.
+  cta_primary:
+    label: Get In Touch
+    url: mailto:wyao45@uwo.ca
+  cta_secondary:
+    label: View LinkedIn
+    url: https://www.linkedin.com/in/wenyi-yao
+    external: true
+
+skills:
+  - name: Python
+    icon: fa-brands fa-python
+  - name: JavaScript
+    icon: fa-brands fa-js
+  - name: React
+    icon: fa-brands fa-react
+  - name: AWS
+    icon: fa-brands fa-aws
+  - name: Docker
+    icon: fa-brands fa-docker
+
+projects_limit: 3
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: false
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+
+selected_papers: false
+social: false
 ---
-
-I am a machine learning associate at the [Vector Institute](https://vectorinstitute.ai/), where I build agentic AI systems for healthcare scheduling workflows. My work includes developing systems that translate free-text physician requests into validated scheduling constraints for downstream APIs, with clarification logic, guardrails, and evaluation pipelines for reliable deployment. 
-
-My interests include agentic AI systems, speech AI, workflow automation, and multimodal learning. I received my M.Eng. from Western University with a specialization in AI, and my Bachelor of Computer Science from Dalhousie University.
-
-Previously, I worked at Western University on LLM-based automatic speech recognition error correction for preschool conversational speech under the guidance of researchers at the National Centre for Audiology, with a focus on improving recognition for young children. This work contributed to a paper submitted to Interspeech 2026 and a poster accepted at the Speech-Language & Audiology Canada Conference.

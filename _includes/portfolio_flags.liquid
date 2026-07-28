@@ -1,0 +1,7 @@
+{% comment %}
+  Shared portfolio chrome flag for homepage + case study pages.
+{% endcomment %}
+{% assign portfolio_ui = false %}
+{% if page.portfolio_home or page.portfolio_ui %}
+  {% assign portfolio_ui = true %}
+{% endif %}
