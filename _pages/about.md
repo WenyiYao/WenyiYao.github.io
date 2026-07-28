@@ -12,7 +12,7 @@ hero:
   headline_before: "I build AI systems and write"
   headline_accent: "about it!"
   bio: >-
-    I build and evaluate agentic AI systems for cybersecurity remediation at NixGuard. My work and interests span agentic AI, speech AI, workflow automation, and multimodal learning. I hold an M.Eng. from Western University with a focus on AI and a B.C.S. from Dalhousie University.
+    I build and evaluate agentic AI systems for cybersecurity remediation at NixGuard. My interests span agentic AI, speech AI, workflow automation, and multimodal learning. I hold an M.Eng. from Western University and a B.C.S. from Dalhousie University.
   cta_primary:
     label: Get In Touch
     url: mailto:wyao45@uwo.ca

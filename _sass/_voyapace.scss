@@ -38,6 +38,34 @@ $portfolio-pink: #ff6bcb;
 
   &__shot {
     margin: 0;
+
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.45);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    picture {
+      display: block;
+      margin: 0;
+      border: none;
+      box-shadow: none;
+    }
+
+    img,
+    .voyapace-case__img {
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100%;
+      display: block;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      image-rendering: auto;
+    }
   }
 
   &__caption {
@@ -46,21 +74,6 @@ $portfolio-pink: #ff6bcb;
     letter-spacing: 0.02em;
     color: $portfolio-muted;
     text-align: center;
-  }
-
-  &__img,
-  figure,
-  picture,
-  img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100%;
-    display: block;
-    margin: 0;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-    image-rendering: auto;
   }
 
   &__tags {
@@ -74,7 +87,7 @@ $portfolio-pink: #ff6bcb;
     li {
       padding: 0.4rem 0.85rem;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: 1.5px solid rgba(255, 255, 255, 0.55);
       font-size: 0.85rem;
       font-weight: 500;
       color: $portfolio-text;
