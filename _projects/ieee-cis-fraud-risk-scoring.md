@@ -10,34 +10,12 @@ portfolio_ui: true
 ---
 
 <div class="fraud-case">
-  <section class="fraud-case__hero-panel">
-    <a class="fraud-case__dataset" href="https://www.kaggle.com/competitions/ieee-fraud-detection/data" target="_blank" rel="noopener noreferrer">
-      <span>DATASET</span>
-      <strong>IEEE-CIS Fraud Detection</strong>
-      <small>Kaggle · 590,540 labeled transactions · transaction + identity tables</small>
-      <b aria-hidden="true">↗</b>
-    </a>
-
-    <div class="fraud-case__kpis" aria-label="Project highlights">
-      <div class="fraud-case__kpi fraud-case__kpi--blue">
-        <span class="fraud-case__value">590K</span>
-        <span class="fraud-case__label">transactions</span>
-      </div>
-      <div class="fraud-case__kpi fraud-case__kpi--violet">
-        <span class="fraud-case__value">0.927</span>
-        <span class="fraud-case__label">ROC-AUC</span>
-      </div>
-      <div class="fraud-case__kpi fraud-case__kpi--amber">
-        <span class="fraud-case__value">82.5%</span>
-        <span class="fraud-case__label">precision</span>
-      </div>
-      <div class="fraud-case__kpi fraud-case__kpi--pink">
-        <span class="fraud-case__value">0.618</span>
-        <span class="fraud-case__label">test PR-AUC</span>
-      </div>
-    </div>
-
-  </section>
+  <a class="fraud-case__dataset" href="https://www.kaggle.com/competitions/ieee-fraud-detection/data" target="_blank" rel="noopener noreferrer">
+    <span>DATASET</span>
+    <strong>IEEE-CIS Fraud Detection</strong>
+    <small>Kaggle · 590,540 labeled transactions · transaction + identity tables</small>
+    <b aria-hidden="true">↗</b>
+  </a>
 
   <div class="fraud-case__section-head">
     <span>01</span>
