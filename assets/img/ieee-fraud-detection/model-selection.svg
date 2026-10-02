@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="model-title model-desc">
+  <style>
+    text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title { fill: #f5f5f7; font-size: 25px; font-weight: 700; }
+    .subtitle { fill: #a3a3b0; font-size: 14px; }
+    .label { fill: #f5f5f7; font-size: 15px; font-weight: 600; }
+    .muted { fill: #a3a3b0; font-size: 13px; }
+    .value { fill: #f5f5f7; font-size: 16px; font-weight: 700; }
+  </style>
+  <rect width="960" height="520" rx="28" fill="#15151b"/>
+
+  <title id="model-title">Validation PR-AUC by model candidate</title>
+  <desc id="model-desc">CatBoost baseline has the highest validation PR-AUC at 0.658.</desc>
+  <text x="44" y="52" class="title">Model selection</text>
+  <text x="44" y="80" class="subtitle">Validation PR-AUC · higher is better</text>
+  <line x1="270" y1="122" x2="270" y2="446" stroke="#363644" stroke-width="1"/>
+      <text x="270" y="470" class="muted" text-anchor="middle">0.0</text>
+<line x1="447.14285714285717" y1="122" x2="447.14285714285717" y2="446" stroke="#363644" stroke-width="1"/>
+      <text x="447.14285714285717" y="470" class="muted" text-anchor="middle">0.2</text>
+<line x1="624.2857142857143" y1="122" x2="624.2857142857143" y2="446" stroke="#363644" stroke-width="1"/>
+      <text x="624.2857142857143" y="470" class="muted" text-anchor="middle">0.4</text>
+<line x1="801.4285714285714" y1="122" x2="801.4285714285714" y2="446" stroke="#363644" stroke-width="1"/>
+      <text x="801.4285714285714" y="470" class="muted" text-anchor="middle">0.6</text>
+<line x1="890" y1="122" x2="890" y2="446" stroke="#363644" stroke-width="1"/>
+      <text x="890" y="470" class="muted" text-anchor="middle">0.7</text>
+  <line x1="300.4" y1="122" x2="300.4" y2="446" stroke="#6fe3b1" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="308.4" y="116" fill="#6fe3b1" font-size="12">no-skill 0.034</text>
+  
+      <text x="44" y="163" class="label">Logistic Regression</text>
+      <rect x="270" y="145" width="620" height="26" rx="13" fill="#2a2a36"/>
+      <rect x="270" y="145" width="346.9" height="26" rx="13" fill="#9b8cff" opacity="0.82"/>
+      <text x="910" y="164" class="value" text-anchor="end">0.392</text>
+      
+
+      <text x="44" y="225" class="label">LightGBM baseline</text>
+      <rect x="270" y="207" width="620" height="26" rx="13" fill="#2a2a36"/>
+      <rect x="270" y="207" width="557.8" height="26" rx="13" fill="#6cb7ff" opacity="0.82"/>
+      <text x="910" y="226" class="value" text-anchor="end">0.630</text>
+      
+
+      <text x="44" y="287" class="label">LightGBM tuned</text>
+      <rect x="270" y="269" width="620" height="26" rx="13" fill="#2a2a36"/>
+      <rect x="270" y="269" width="558.1" height="26" rx="13" fill="#6cb7ff" opacity="0.82"/>
+      <text x="910" y="288" class="value" text-anchor="end">0.630</text>
+      
+
+      <text x="44" y="349" class="label">CatBoost tuned</text>
+      <rect x="270" y="331" width="620" height="26" rx="13" fill="#2a2a36"/>
+      <rect x="270" y="331" width="581.3" height="26" rx="13" fill="#ffb85c" opacity="0.82"/>
+      <text x="910" y="350" class="value" text-anchor="end">0.656</text>
+      
+
+      <text x="44" y="411" class="label">CatBoost baseline</text>
+      <rect x="270" y="393" width="620" height="26" rx="13" fill="#2a2a36"/>
+      <rect x="270" y="393" width="583.2" height="26" rx="13" fill="#ff6bcb"/>
+      <text x="910" y="412" class="value" text-anchor="end">0.658</text>
+      <rect x="706" y="365" width="113" height="22" rx="11" fill="#ff6bcb" opacity="0.18"/><text x="762" y="380" fill="#ff6bcb" font-size="11" font-weight="700" text-anchor="middle">SELECTED</text>
+</svg>

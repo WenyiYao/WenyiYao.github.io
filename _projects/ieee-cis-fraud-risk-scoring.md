@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Real-Time Fraud Risk Scoring
-description: Leakage-safe fraud modeling on 590K transactions, evaluated on a held-out future period.
-img: assets/img/ieee-fraud-detection/model-comparison.png
+description: Leakage-safe fraud modeling across 590K transactions.
+img: assets/img/ieee-fraud-detection/model-selection.svg
 importance: 1
 category: work
 featured: true
@@ -10,98 +10,137 @@ portfolio_ui: true
 ---
 
 <div class="fraud-case">
-  <p class="fraud-case__lede">
-    A leakage-safe fraud-ranking pipeline designed and evaluated for
-    <strong>future, unseen transactions.</strong>
-  </p>
+  <section class="fraud-case__hero-panel">
+    <span class="fraud-case__eyebrow">IEEE-CIS · MACHINE LEARNING</span>
+    <h2>Fraud ranking built for what happens next.</h2>
+    <p>Leakage-safe feature engineering and model selection across 590K transactions.</p>
 
-  <div class="fraud-case__kpis" aria-label="Project highlights">
-    <div class="fraud-case__kpi">
-      <span class="fraud-case__value">590K</span>
-      <span class="fraud-case__label">transactions</span>
+    <a class="fraud-case__dataset" href="https://www.kaggle.com/competitions/ieee-fraud-detection/data" target="_blank" rel="noopener noreferrer">
+      <span>DATASET</span>
+      <strong>IEEE-CIS Fraud Detection</strong>
+      <small>Kaggle · 590,540 labeled transactions · transaction + identity tables</small>
+      <b aria-hidden="true">↗</b>
+    </a>
+
+    <div class="fraud-case__kpis" aria-label="Project highlights">
+      <div class="fraud-case__kpi fraud-case__kpi--blue">
+        <span class="fraud-case__value">590K</span>
+        <span class="fraud-case__label">transactions</span>
+      </div>
+      <div class="fraud-case__kpi fraud-case__kpi--violet">
+        <span class="fraud-case__value">0.927</span>
+        <span class="fraud-case__label">ROC-AUC</span>
+      </div>
+      <div class="fraud-case__kpi fraud-case__kpi--amber">
+        <span class="fraud-case__value">82.5%</span>
+        <span class="fraud-case__label">precision</span>
+      </div>
+      <div class="fraud-case__kpi fraud-case__kpi--pink">
+        <span class="fraud-case__value">0.618</span>
+        <span class="fraud-case__label">test PR-AUC</span>
+      </div>
     </div>
-    <div class="fraud-case__kpi">
-      <span class="fraud-case__value">3.50%</span>
-      <span class="fraud-case__label">fraud prevalence</span>
-    </div>
-    <div class="fraud-case__kpi">
-      <span class="fraud-case__value">496</span>
-      <span class="fraud-case__label">model features</span>
-    </div>
-    <div class="fraud-case__kpi fraud-case__kpi--accent">
-      <span class="fraud-case__value">0.618</span>
-      <span class="fraud-case__label">test PR-AUC</span>
-    </div>
+
+  </section>
+
+  <div class="fraud-case__section-head">
+    <span>01</span>
+    <h2>Validation design</h2>
+    <div></div>
   </div>
 
-  <h2 class="fraud-case__heading">Leakage-safe workflow</h2>
+  <div class="fraud-case__timeline" role="img" aria-label="70 percent train, 15 percent validation, 15 percent test chronological split">
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--train">
+      <strong>TRAIN</strong>
+      <span>413,378 · 70%</span>
+    </div>
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--validation">
+      <strong>VALIDATE</strong>
+      <span>88,581 · 15%</span>
+    </div>
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--test">
+      <strong>TEST</strong>
+      <span>88,581 · 15%</span>
+    </div>
+  </div>
+  <p class="fraud-case__timeline-note"><span>PAST</span><span>182 relative days → FUTURE</span></p>
 
-  <div class="fraud-case__flow" aria-label="Modeling workflow">
+  <div class="fraud-case__flow" aria-label="Leakage-safe modeling workflow">
     <div class="fraud-case__step">
-      <span class="fraud-case__step-number">01</span>
-      <strong>Split by time</strong>
-      <span>70% train · 15% validation · 15% test</span>
+      <span class="fraud-case__step-icon">01</span>
+      <div>
+        <strong>Chronological split</strong>
+        <span>No random mixing across time</span>
+      </div>
     </div>
-    <div class="fraud-case__arrow" aria-hidden="true">→</div>
     <div class="fraud-case__step">
-      <span class="fraud-case__step-number">02</span>
-      <strong>Build strict-past features</strong>
-      <span>Same-time and future events stay invisible</span>
+      <span class="fraud-case__step-icon">02</span>
+      <div>
+        <strong>Strict-past features</strong>
+        <span>Same-time and future events stay invisible</span>
+      </div>
     </div>
-    <div class="fraud-case__arrow" aria-hidden="true">→</div>
     <div class="fraud-case__step">
-      <span class="fraud-case__step-number">03</span>
-      <strong>Freeze, then test once</strong>
-      <span>Model decisions use validation only</span>
+      <span class="fraud-case__step-icon">03</span>
+      <div>
+        <strong>Freeze → test once</strong>
+        <span>Selection uses validation only</span>
+      </div>
     </div>
   </div>
 
-  <div class="fraud-case__visual">
-    {% include figure.liquid loading="eager" path="assets/img/ieee-fraud-detection/temporal-split.png" title="Chronological train, validation, and test partitions" class="fraud-case__img" %}
-    <p class="fraud-case__caption">182 relative days · every test transaction occurs after validation</p>
+  <div class="fraud-case__section-head">
+    <span>02</span>
+    <h2>Model selection</h2>
+    <div></div>
   </div>
 
-  <h2 class="fraud-case__heading">Model selection</h2>
+  <div class="fraud-case__model-grid">
+    <div class="fraud-case__chart-card">
+      {% include figure.liquid loading="eager" path="assets/img/ieee-fraud-detection/model-selection.svg" title="Validation PR-AUC across model candidates" class="fraud-case__img" %}
+    </div>
 
-  <div class="fraud-case__visual">
-    {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/model-comparison.png" title="Validation PR-AUC across model candidates" class="fraud-case__img" %}
-    <p class="fraud-case__caption">
-      CatBoost baseline wins on validation PR-AUC: <strong>0.658</strong>
-    </p>
+    <div class="fraud-case__selection-card">
+      <span class="fraud-case__eyebrow">SELECTED MODEL</span>
+      <strong>CatBoost</strong>
+      <p>Best validation ranking without tuning.</p>
+      <div>
+        <span>Native categorical handling</span>
+        <span>Refit on train + validation</span>
+      </div>
+    </div>
+
   </div>
 
-  <div class="fraud-case__mini-grid">
-    <div class="fraud-case__visual">
-      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-ablation.png" title="LightGBM feature-group ablation" class="fraud-case__img" %}
-      <p class="fraud-case__caption">Engineered current-transaction features deliver the clearest ablation gain</p>
+  <div class="fraud-case__chart-card fraud-case__chart-card--spaced">
+    {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-ablation-redrawn.svg" title="LightGBM feature-group ablation" class="fraud-case__img" %}
+  </div>
+
+  <div class="fraud-case__section-head">
+    <span>03</span>
+    <h2>Model performance</h2>
+    <div></div>
+  </div>
+
+  <div class="fraud-case__result-grid">
+    <div class="fraud-case__chart-card">
+      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/main-metrics.svg" title="Model performance metrics" class="fraud-case__img" %}
     </div>
-    <div class="fraud-case__result-card">
-      <span class="fraud-case__eyebrow">Held-out future test</span>
-      <div><strong>0.6179</strong><span>PR-AUC</span></div>
-      <div><strong>0.9268</strong><span>ROC-AUC</span></div>
-      <div><strong>0.8250</strong><span>precision @ 0.5</span></div>
-      <div><strong>0.4466</strong><span>recall @ 0.5</span></div>
-      <small>Threshold 0.5 is diagnostic, not a production policy.</small>
+    <div class="fraud-case__chart-card">
+      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/confusion-matrix.svg" title="Final test confusion matrix" class="fraud-case__img" %}
     </div>
   </div>
 
-  <h2 class="fraud-case__heading">Final test behavior</h2>
-
-  <div class="fraud-case__mini-grid fraud-case__mini-grid--balanced">
-    <div class="fraud-case__visual">
-      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/precision-recall-curve.png" title="Final precision-recall curve" class="fraud-case__img" %}
-      <p class="fraud-case__caption">Precision–recall stays well above the 3.48% no-skill baseline</p>
-    </div>
-    <div class="fraud-case__visual">
-      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-importance.png" title="Top final-model features" class="fraud-case__img" %}
-      <p class="fraud-case__caption">Card, count, email, amount, device, time, and history signals lead</p>
-    </div>
+  <div class="fraud-case__chart-card fraud-case__chart-card--spaced">
+    {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-importance-redrawn.svg" title="Top final-model features" class="fraud-case__img" %}
   </div>
+
+  <p class="fraud-case__threshold-note">Precision and confusion matrix use threshold 0.5.</p>
 
   <div class="fraud-case__guardrails" aria-label="Interpretation guardrails">
     <span>Pseudo-entity ≠ verified customer</span>
     <span><code>TransactionDT</code> = relative time</span>
-    <span>Feature importance ≠ causality</span>
+    <span>Importance ≠ causality</span>
     <span>Batch latency ≠ API latency</span>
   </div>
 
