@@ -11,10 +11,6 @@ portfolio_ui: true
 
 <div class="fraud-case">
   <section class="fraud-case__hero-panel">
-    <span class="fraud-case__eyebrow">IEEE-CIS · MACHINE LEARNING</span>
-    <h2>Fraud ranking built for what happens next.</h2>
-    <p>Leakage-safe feature engineering and model selection across 590K transactions.</p>
-
     <a class="fraud-case__dataset" href="https://www.kaggle.com/competitions/ieee-fraud-detection/data" target="_blank" rel="noopener noreferrer">
       <span>DATASET</span>
       <strong>IEEE-CIS Fraud Detection</strong>
@@ -49,29 +45,21 @@ portfolio_ui: true
     <div></div>
   </div>
 
-  <div class="fraud-case__flow" aria-label="Leakage-safe modeling workflow">
-    <div class="fraud-case__step">
-      <span class="fraud-case__step-icon">01</span>
-      <div>
-        <strong>Chronological split</strong>
-        <span>70% train · 15% validation · 15% test</span>
-      </div>
+  <div class="fraud-case__timeline" role="img" aria-label="70 percent train, 15 percent validation, 15 percent test chronological split">
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--train">
+      <strong>TRAIN</strong>
+      <span>413,378 · 70%</span>
     </div>
-    <div class="fraud-case__step">
-      <span class="fraud-case__step-icon">02</span>
-      <div>
-        <strong>Strict-past features</strong>
-        <span>Same-time and future events stay invisible</span>
-      </div>
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--validation">
+      <strong>VALIDATE</strong>
+      <span>88,581 · 15%</span>
     </div>
-    <div class="fraud-case__step">
-      <span class="fraud-case__step-icon">03</span>
-      <div>
-        <strong>Freeze → test once</strong>
-        <span>Selection uses validation only</span>
-      </div>
+    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--test">
+      <strong>TEST</strong>
+      <span>88,581 · 15%</span>
     </div>
   </div>
+  <p class="fraud-case__timeline-note"><span>PAST</span><span>182 relative days → FUTURE</span></p>
 
   <div class="fraud-case__section-head">
     <span>02</span>
@@ -79,21 +67,8 @@ portfolio_ui: true
     <div></div>
   </div>
 
-  <div class="fraud-case__model-grid">
-    <div class="fraud-case__chart-card">
-      {% include figure.liquid loading="eager" path="assets/img/ieee-fraud-detection/model-selection.svg" title="Validation PR-AUC across model candidates" class="fraud-case__img" %}
-    </div>
-
-    <div class="fraud-case__selection-card">
-      <span class="fraud-case__eyebrow">SELECTED MODEL</span>
-      <strong>CatBoost</strong>
-      <p>Best validation ranking without tuning.</p>
-      <div>
-        <span>Native categorical handling</span>
-        <span>Refit on train + validation</span>
-      </div>
-    </div>
-
+  <div class="fraud-case__chart-card">
+    {% include figure.liquid loading="eager" path="assets/img/ieee-fraud-detection/model-selection.svg" title="Validation PR-AUC across model candidates" class="fraud-case__img" %}
   </div>
 
   <div class="fraud-case__chart-card fraud-case__chart-card--spaced">
@@ -113,10 +88,9 @@ portfolio_ui: true
     <div class="fraud-case__chart-card">
       {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/confusion-matrix.svg" title="Final test confusion matrix" class="fraud-case__img" %}
     </div>
-  </div>
-
-  <div class="fraud-case__chart-card fraud-case__chart-card--spaced">
-    {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-importance-redrawn.svg" title="Top final-model features" class="fraud-case__img" %}
+    <div class="fraud-case__chart-card">
+      {% include figure.liquid loading="lazy" path="assets/img/ieee-fraud-detection/feature-importance-redrawn.svg" title="Top final-model features" class="fraud-case__img" %}
+    </div>
   </div>
 
   <p class="fraud-case__threshold-note">Precision and confusion matrix use threshold 0.5.</p>
