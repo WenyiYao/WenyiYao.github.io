@@ -1,0 +1,260 @@
+/*******************************************************************************
+ * IEEE-CIS fraud project dashboard
+ ******************************************************************************/
+
+$fraud-text: #f5f5f5;
+$fraud-muted: #a0a0a0;
+$fraud-accent: #ff6bcb;
+$fraud-blue: #6cb7ff;
+$fraud-panel: rgba(255, 255, 255, 0.055);
+$fraud-border: rgba(255, 255, 255, 0.18);
+
+.fraud-case {
+  margin-top: 0.5rem;
+
+  &__lede {
+    max-width: 48rem;
+    margin: 0 0 2rem;
+    color: $fraud-muted;
+    font-size: 1.08rem;
+    line-height: 1.6;
+
+    strong {
+      color: $fraud-text;
+    }
+  }
+
+  &__kpis {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 2.75rem;
+  }
+
+  &__kpi {
+    display: flex;
+    min-height: 7rem;
+    padding: 1.1rem;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid $fraud-border;
+    border-radius: 1rem;
+    background: $fraud-panel;
+
+    &--accent {
+      border-color: rgba($fraud-accent, 0.75);
+      background: rgba($fraud-accent, 0.1);
+    }
+  }
+
+  &__value {
+    color: $fraud-text;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &__label {
+    margin-top: 0.55rem;
+    color: $fraud-muted;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__heading {
+    margin: 2.75rem 0 1.2rem;
+    color: $fraud-text;
+    font-size: 1.3rem;
+    font-weight: 650;
+  }
+
+  &__flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    align-items: stretch;
+  }
+
+  &__step {
+    display: flex;
+    min-height: 9rem;
+    padding: 1.15rem;
+    flex-direction: column;
+    border: 1px solid $fraud-border;
+    border-radius: 1rem;
+    background: $fraud-panel;
+
+    strong {
+      margin: auto 0 0.35rem;
+      color: $fraud-text;
+      font-size: 0.98rem;
+    }
+
+    > span:last-child {
+      color: $fraud-muted;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__step-number,
+  &__eyebrow {
+    color: $fraud-accent;
+    font-family: monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  &__arrow {
+    display: grid;
+    color: $fraud-blue;
+    font-size: 1.3rem;
+    place-items: center;
+  }
+
+  &__visual {
+    min-width: 0;
+
+    figure,
+    picture {
+      display: block;
+      margin: 0;
+    }
+
+    figure {
+      overflow: hidden;
+      border: 1px solid $fraud-border;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  &__caption {
+    margin: 0.7rem 0 0;
+    color: $fraud-muted;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    text-align: center;
+
+    strong {
+      color: $fraud-text;
+    }
+  }
+
+  &__mini-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(14rem, 0.55fr);
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    align-items: stretch;
+
+    &--balanced {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+  }
+
+  &__result-card {
+    display: grid;
+    padding: 1.25rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    border: 1px solid rgba($fraud-accent, 0.55);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, rgba($fraud-accent, 0.14), rgba($fraud-blue, 0.08));
+
+    .fraud-case__eyebrow,
+    small {
+      grid-column: 1 / -1;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    strong {
+      color: $fraud-text;
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+
+    div span,
+    small {
+      margin-top: 0.3rem;
+      color: $fraud-muted;
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+  }
+
+  &__guardrails,
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  &__guardrails {
+    margin-top: 2.5rem;
+
+    span {
+      padding: 0.45rem 0.7rem;
+      border-left: 2px solid $fraud-blue;
+      color: $fraud-muted;
+      background: $fraud-panel;
+      font-size: 0.78rem;
+    }
+
+    code {
+      color: $fraud-text;
+    }
+  }
+
+  &__tags {
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      padding: 0.4rem 0.8rem;
+      border: 1px solid $fraud-border;
+      border-radius: 999px;
+      color: $fraud-text;
+      font-size: 0.78rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .fraud-case {
+    &__kpis {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__flow,
+    &__mini-grid,
+    &__mini-grid--balanced {
+      grid-template-columns: 1fr;
+    }
+
+    &__arrow {
+      transform: rotate(90deg);
+    }
+
+    &__step {
+      min-height: 7.5rem;
+    }
+  }
+}
