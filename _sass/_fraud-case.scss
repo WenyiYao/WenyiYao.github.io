@@ -216,61 +216,6 @@ $fraud-green: #6fe3b1;
     }
   }
 
-  &__timeline {
-    display: flex;
-    height: 7.75rem;
-    gap: 0.4rem;
-  }
-
-  &__timeline-segment {
-    display: flex;
-    min-width: 0;
-    padding: 1rem;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 0.9rem;
-
-    strong {
-      color: $fraud-text;
-      font-size: 0.76rem;
-      letter-spacing: 0.08em;
-    }
-
-    span {
-      margin-top: 0.25rem;
-      overflow: hidden;
-      color: rgba($fraud-text, 0.72);
-      font-size: 0.75rem;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    &--train {
-      flex: 7;
-      background: linear-gradient(100deg, rgba($fraud-blue, 0.74), rgba($fraud-blue, 0.36));
-    }
-
-    &--validation {
-      flex: 1.5;
-      background: linear-gradient(100deg, rgba($fraud-amber, 0.78), rgba($fraud-amber, 0.42));
-    }
-
-    &--test {
-      flex: 1.5;
-      background: linear-gradient(100deg, rgba($fraud-green, 0.75), rgba($fraud-green, 0.38));
-    }
-  }
-
-  &__timeline-note {
-    display: flex;
-    margin: 0.55rem 0 0;
-    justify-content: space-between;
-    color: $fraud-muted;
-    font-family: monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.06em;
-  }
-
   &__flow {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -334,12 +279,12 @@ $fraud-green: #6fe3b1;
   &__selection-card {
     overflow: hidden;
     border-radius: 1.2rem;
-    background: $fraud-panel;
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.28);
   }
 
   &__chart-card {
-    padding: 0.35rem;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
 
     &--spaced {
       margin-top: 1rem;
@@ -349,6 +294,9 @@ $fraud-green: #6fe3b1;
     picture {
       display: block;
       margin: 0;
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
     }
   }
 
@@ -356,7 +304,9 @@ $fraud-green: #6fe3b1;
     display: block;
     width: 100% !important;
     height: auto !important;
+    border: 0 !important;
     border-radius: 0.95rem;
+    box-shadow: none !important;
   }
 
   &__selection-card {
@@ -455,18 +405,6 @@ $fraud-green: #6fe3b1;
 
     &__kpis {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    &__timeline {
-      height: 9rem;
-    }
-
-    &__timeline-segment {
-      padding: 0.7rem;
-
-      span {
-        font-size: 0.65rem;
-      }
     }
 
     &__flow,

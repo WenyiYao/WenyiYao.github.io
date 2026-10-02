@@ -49,28 +49,12 @@ portfolio_ui: true
     <div></div>
   </div>
 
-  <div class="fraud-case__timeline" role="img" aria-label="70 percent train, 15 percent validation, 15 percent test chronological split">
-    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--train">
-      <strong>TRAIN</strong>
-      <span>413,378 · 70%</span>
-    </div>
-    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--validation">
-      <strong>VALIDATE</strong>
-      <span>88,581 · 15%</span>
-    </div>
-    <div class="fraud-case__timeline-segment fraud-case__timeline-segment--test">
-      <strong>TEST</strong>
-      <span>88,581 · 15%</span>
-    </div>
-  </div>
-  <p class="fraud-case__timeline-note"><span>PAST</span><span>182 relative days → FUTURE</span></p>
-
   <div class="fraud-case__flow" aria-label="Leakage-safe modeling workflow">
     <div class="fraud-case__step">
       <span class="fraud-case__step-icon">01</span>
       <div>
         <strong>Chronological split</strong>
-        <span>No random mixing across time</span>
+        <span>70% train · 15% validation · 15% test</span>
       </div>
     </div>
     <div class="fraud-case__step">
