@@ -169,10 +169,16 @@ $fraud-green: #6fe3b1;
   }
 
   &__result-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     gap: 1rem;
-    align-items: start;
+
+    > .fraud-case__chart-card {
+      width: 100%;
+      max-width: none;
+      flex: 0 0 100%;
+    }
   }
 
   &__threshold-note {
