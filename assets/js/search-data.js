@@ -433,7 +433,7 @@ ninja.data = [{
               window.location.href = "/projects/9_project/";
             },},{id: "projects-real-time-fraud-risk-scoring",
           title: 'Real-Time Fraud Risk Scoring',
-          description: "Leakage-safe fraud modeling on 590K transactions, evaluated on a held-out future period.",
+          description: "Leakage-safe fraud modeling across 590K transactions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/ieee-cis-fraud-risk-scoring/";
             },},{id: "projects-voyapace",

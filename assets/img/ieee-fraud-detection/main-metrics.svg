@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" role="img" aria-labelledby="metrics-title metrics-desc">
+  <style>
+    text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title { fill: #f5f5f7; font-size: 25px; font-weight: 700; }
+    .subtitle { fill: #a3a3b0; font-size: 14px; }
+    .label { fill: #f5f5f7; font-size: 15px; font-weight: 600; }
+    .muted { fill: #a3a3b0; font-size: 13px; }
+    .value { fill: #f5f5f7; font-size: 16px; font-weight: 700; }
+  </style>
+  <rect width="960" height="430" rx="28" fill="#15151b"/>
+
+  <title id="metrics-title">Model performance metrics</title>
+  <desc id="metrics-desc">The final CatBoost model achieves 0.6179 PR-AUC, 0.9268 ROC-AUC, 82.50 percent precision, 44.66 percent recall, and 0.5796 F1 at threshold 0.5.</desc>
+  <text x="44" y="52" class="title">Model performance</text>
+  <text x="44" y="80" class="subtitle">CatBoost · final evaluation</text>
+
+  <text x="70" y="145" fill="#6cb7ff" font-size="13" font-weight="700" letter-spacing="1.5">MODEL SCORE</text>
+  <text x="70" y="236" fill="#f5f5f7" font-size="76" font-weight="750">0.9268</text>
+  <text x="70" y="273" class="label">ROC-AUC</text>
+  <rect x="70" y="296" width="260" height="8" rx="4" fill="#2a2a36"/>
+  <rect x="70" y="296" width="241" height="8" rx="4" fill="#6cb7ff"/>
+  <text x="70" y="340" fill="#a3a3b0" font-size="13">PR-AUC 0.6179 · fraud rate 3.48%</text>
+
+  
+      <text x="420" y="147" class="label">PR-AUC</text>
+      <rect x="570" y="130" width="285" height="22" rx="11" fill="#2a2a36"/>
+      <rect x="570" y="130" width="176.1" height="22" rx="11" fill="#ff6bcb" opacity="0.88"/>
+      <text x="900" y="147" class="value" text-anchor="end">0.6179</text>
+
+      <text x="420" y="210" class="label">Precision @ 0.5</text>
+      <rect x="570" y="193" width="285" height="22" rx="11" fill="#2a2a36"/>
+      <rect x="570" y="193" width="235.1" height="22" rx="11" fill="#9b8cff" opacity="0.88"/>
+      <text x="900" y="210" class="value" text-anchor="end">0.8250</text>
+
+      <text x="420" y="273" class="label">Recall @ 0.5</text>
+      <rect x="570" y="256" width="285" height="22" rx="11" fill="#2a2a36"/>
+      <rect x="570" y="256" width="127.3" height="22" rx="11" fill="#ffb85c" opacity="0.88"/>
+      <text x="900" y="273" class="value" text-anchor="end">0.4466</text>
+
+      <text x="420" y="336" class="label">F1 @ 0.5</text>
+      <rect x="570" y="319" width="285" height="22" rx="11" fill="#2a2a36"/>
+      <rect x="570" y="319" width="165.2" height="22" rx="11" fill="#6fe3b1" opacity="0.88"/>
+      <text x="900" y="336" class="value" text-anchor="end">0.5796</text>
+  <text x="900" y="395" fill="#ffb85c" font-size="12" font-weight="700" text-anchor="end">0.5 THRESHOLD IS DIAGNOSTIC</text>
+</svg>

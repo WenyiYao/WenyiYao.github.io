@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="ablation-title ablation-desc">
+  <style>
+    text { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .title { fill: #f5f5f7; font-size: 25px; font-weight: 700; }
+    .subtitle { fill: #a3a3b0; font-size: 14px; }
+    .label { fill: #f5f5f7; font-size: 15px; font-weight: 600; }
+    .muted { fill: #a3a3b0; font-size: 13px; }
+    .value { fill: #f5f5f7; font-size: 16px; font-weight: 700; }
+  </style>
+  <rect width="960" height="500" rx="28" fill="#15151b"/>
+
+  <title id="ablation-title">LightGBM feature ablation</title>
+  <desc id="ablation-desc">Current engineered features produce the highest validation PR-AUC in the ablation study.</desc>
+  <text x="44" y="52" class="title">Feature ablation</text>
+  <text x="44" y="80" class="subtitle">Fixed LightGBM configuration · validation PR-AUC</text>
+  <line x1="95" y1="390" x2="885" y2="390" stroke="#363644"/>
+      <text x="81" y="395" class="muted" text-anchor="end">0.610</text>
+<line x1="95" y1="332.39130434782606" x2="885" y2="332.39130434782606" stroke="#363644"/>
+      <text x="81" y="337.39130434782606" class="muted" text-anchor="end">0.615</text>
+<line x1="95" y1="274.7826086956522" x2="885" y2="274.7826086956522" stroke="#363644"/>
+      <text x="81" y="279.7826086956522" class="muted" text-anchor="end">0.620</text>
+<line x1="95" y1="217.17391304347825" x2="885" y2="217.17391304347825" stroke="#363644"/>
+      <text x="81" y="222.17391304347825" class="muted" text-anchor="end">0.625</text>
+<line x1="95" y1="159.56521739130434" x2="885" y2="159.56521739130434" stroke="#363644"/>
+      <text x="81" y="164.56521739130434" class="muted" text-anchor="end">0.630</text>
+  <polyline points="95,345.41086956521696 292.5,335.84782608695616 490,151.73043478260854 687.5,199.31521739130378 885,162.09999999999997" fill="none" stroke="#6cb7ff" stroke-width="4" stroke-linejoin="round"/>
+  
+      
+      <circle cx="95" cy="345.41086956521696" r="8" fill="#6cb7ff" stroke="#15151b" stroke-width="4"/>
+      <text x="95" y="327.41086956521696" fill="#f5f5f7" font-size="14" font-weight="700" text-anchor="middle">0.6139</text>
+      <text x="95" y="425" class="label" text-anchor="middle">Raw</text>
+      <text x="95" y="448" class="muted" text-anchor="middle">390 features</text>
+
+      
+      <circle cx="292.5" cy="335.84782608695616" r="8" fill="#6cb7ff" stroke="#15151b" stroke-width="4"/>
+      <text x="292.5" y="317.84782608695616" fill="#f5f5f7" font-size="14" font-weight="700" text-anchor="middle">0.6147</text>
+      <text x="292.5" y="425" class="label" text-anchor="middle">+ Identity</text>
+      <text x="292.5" y="448" class="muted" text-anchor="middle">430 features</text>
+
+      <circle cx="490" cy="151.73043478260854" r="19" fill="#ff6bcb" opacity="0.16"/>
+      <circle cx="490" cy="151.73043478260854" r="8" fill="#ff6bcb" stroke="#15151b" stroke-width="4"/>
+      <text x="490" y="133.73043478260854" fill="#ff6bcb" font-size="14" font-weight="700" text-anchor="middle">0.6307</text>
+      <text x="490" y="425" class="label" text-anchor="middle">+ Current</text>
+      <text x="490" y="448" class="muted" text-anchor="middle">475 features</text>
+
+      
+      <circle cx="687.5" cy="199.31521739130378" r="8" fill="#6cb7ff" stroke="#15151b" stroke-width="4"/>
+      <text x="687.5" y="181.31521739130378" fill="#f5f5f7" font-size="14" font-weight="700" text-anchor="middle">0.6266</text>
+      <text x="687.5" y="425" class="label" text-anchor="middle">+ History</text>
+      <text x="687.5" y="448" class="muted" text-anchor="middle">484 features</text>
+
+      
+      <circle cx="885" cy="162.09999999999997" r="8" fill="#6cb7ff" stroke="#15151b" stroke-width="4"/>
+      <text x="885" y="144.09999999999997" fill="#f5f5f7" font-size="14" font-weight="700" text-anchor="middle">0.6298</text>
+      <text x="885" y="425" class="label" text-anchor="middle">+ Velocity</text>
+      <text x="885" y="448" class="muted" text-anchor="middle">496 features</text>
+  <rect x="668" y="42" width="245" height="42" rx="21" fill="#ff6bcb" opacity="0.14"/>
+  <text x="790" y="68" fill="#ff6bcb" font-size="14" font-weight="700" text-anchor="middle">RAW → CURRENT  +0.0168</text>
+</svg>
